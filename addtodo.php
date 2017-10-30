@@ -53,7 +53,7 @@ Här sker hämtningen av det som finns i databasen. Denna utförande görs för 
                     Kolla på utförande här nedan och efter den finns en förklaring.
 */
  
-$todos = $pdo->prepare("SELECT * FROM todo WHERE completed = 0");
+$todos = $pdo->prepare("SELECT * FROM todo WHERE completed = 0 ORDER by id DESC");
 $todos ->execute();
 $mytodolist = $todos -> fetchALL(PDO::FETCH_ASSOC);
  
