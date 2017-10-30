@@ -12,7 +12,8 @@ require 'addtodo.php';
                     <title>Todo list</title>
                     <link rel="stylesheet" type="text/css" href="style.css">
                     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-                   
+                    <link href="https://fonts.googleapis.com/css?family=Passion+One" rel="stylesheet">
+                    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">       
                    
  
  
@@ -21,7 +22,7 @@ require 'addtodo.php';
  
  
   <body>
-    
+                    <div class="wrapper">
      <div class="container">
     <div class="row">
         <div class="col-xs-6">
@@ -59,8 +60,9 @@ require 'addtodo.php';
  
         </tbody>
     </table>
-   
-        
+ 
+               
+           
       <hr>
  
         <div class="col-xs-6">
@@ -91,20 +93,17 @@ require 'addtodo.php';
         </div> <!--stänger donelist-->
  
    </div><!--stänger todolist-->
-   </div> <!--stänger col-->        
-           
+   </div> <!--stänger col-->
        
 </div> <!--stänger row-->
 </div> <!--stänger container-->
  
+</div> <!--stänger wrapper-->
+ 
+ 
 <footer>
 <a href="">My github</a>
 </footer>
-
-
- 
- 
-
  
  
 </body>

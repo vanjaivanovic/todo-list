@@ -1,19 +1,14 @@
 <?php
-require 'database.php';  /*Med hjälp av "require" så är det möjligt att koppla ihop olika php filer. Här kopplas databasen. I den filen finns kodningen som är då länken till MySQL databasen och gör det möjligt att alla MySQL funktioner fungerar. Skickar, updaterar, hämtar etc från MySQL databasen. "INSERT INTO, SELECT FROM, UPDATE" är några av dessa MySQL funktioner. Vi övade lite på code acadamy en gång, där berättas mer om dessa och man får träna med dem.*/
- 
-/*task inputfield.
- 
-Första ifsatsen, här läggs det du skriver i inputfältet i databasen. Kolla ifsatsen och under den finns en förklaringen till utförandet*/
- 
+
 $message = "";
  
 if (isset($_POST['submit'])) {
                     $myTodo = $_POST['title'];
  
                     if(!empty($myTodo)) {
-                                       $message = "Your task has been succesfully added.";
+                                       $message = "Your task has been added. There is no perfect moment, just do it.";
                     }if(empty($myTodo)) {
-                                       $message = "You must fill in the task.";
+                                       $message = "";
                     } else {
                     $statement = $pdo->prepare("INSERT INTO todo (title) VALUES ('$myTodo')");
                     $statement ->execute();
@@ -123,3 +118,4 @@ $completed = $pdo->prepare("SELECT * FROM todo WHERE completed = 1");
 $completed ->execute();
 $list_already_done = $completed -> fetchALL(PDO::FETCH_ASSOC);
  
+?>
